@@ -28,7 +28,7 @@
         $acc =  random_int(1111111111,9999999999);
         $code =  random_int(11111,99999);
         try{
-            $stmt = $this->con->prepare('insert into users(user_id,email,account_no,sort_code,password,first_name,acc_type,sex,country,acc_mode,phone,address,status)values(:user_id,:email,:account_no,:sort_code,:password,:first_name,:acc_type,:sex,:country,:acc_mode,:phone,:address,:status)');
+            $stmt = $this->con->prepare('insert into users(user_id,email,account_no,sort_code,password,first_name,acc_type,sex,image,country,acc_mode,phone,address,status)values(:user_id,:email,:account_no,:sort_code,:password,:first_name,:acc_type,:sex,:image,:country,:acc_mode,:phone,:address,:status)');
             $stmt->bindParam(':user_id',$user_id);
             $stmt->bindParam('email',$this->email);
             $stmt->bindParam(':account_no',$acc);
@@ -37,6 +37,7 @@
             $stmt->bindParam(':first_name',$this->first_name);
             $stmt->bindParam(':acc_type',$this->acc_type);
             $stmt->bindParam(':sex',$this->sex);
+            $stmt->bindParam(':image',$this->image);
             $stmt->bindParam(':country',$this->country);
             $stmt->bindParam(':acc_mode',$this->acc_mode);
             $stmt->bindParam(':phone',$this->phone);
@@ -239,9 +240,6 @@
                         $_SESSION['img']        = $row->image;
                         $_SESSION['account']    = $row->account_no;
                         $_SESSION['sort']       = $row->sort_code;
-
-
-
                         return 'user';
                     }
                 }else{

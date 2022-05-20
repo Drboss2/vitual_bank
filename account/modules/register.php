@@ -20,16 +20,29 @@ if(isset($_POST['Create'])){
 
     $user->country    = $post['country'];
     $user->phone      = $post['phone'];
+    $image            = $_FILES['file']['name'];
+    $tem_img          = $_FILES['file']['tmp_name'];
 
-    if($user->emailExist($user->email)){
-        $error ="<p class='alert alert-danger'>email address has already been used.</p>";
-    }else{
-        if($user->CreateAccount()){
-            $error ="<p class='alert alert-success'>Account Creation successfull <br> Your Login Details has been sent to your registered Email.</p>";
+    $explode = explode(".",$image);
+
+    $allowedExts = array("jpeg", "jpg", "png");
+
+    $file_extension = end($explode);
+
+    if(in_array($file_extension, $allowedExts)){
+        $user->image= time(). '.' . end($explode );
+
+        if($user->emailExist($user->email)){
+            $error ="<p class='alert alert-danger'>email address has already been used.</p>";
+        }else{
+            move_uploaded_file($tem_img, "../images/" . $user->image);
+            if($user->CreateAccount()){
+                $error ="<p class='alert alert-success'>Account Creation successfull <br> Your Login Details has been sent to your registered Email.</p>";
+            }
         }
+    }else{
+        $error ="<p class='alert alert-danger'>Invalid image photo image format.</p>";
     }
-}else{
-    echo 'not set';
 }
 ?>
 <!DOCTYPE html>
