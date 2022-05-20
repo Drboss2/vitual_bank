@@ -1,0 +1,20 @@
+.sidebar-menu li ul li{
+  padding: 10px;
+  list-style-type: none;
+  padding-left:20px;
+  margin-left:20px;
+}
+.sidebar-menu li ul li:hover{
+    background-color: rgb(12, 12, 0);
+}
+.sidebar-menu li ul li a{
+   text-decoration: none !important;
+
+}
+.sidebar-menu,.main-sidebar{
+    background-color: rgb(26, 1, 1) !important;
+    overflow-y: hidden;
+}
+.main-header{
+    background:black
+}

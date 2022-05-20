@@ -1,0 +1,8 @@
+[25-Jan-2022 09:28:03 America/New_York] PHP Notice:  Undefined index: first_name in /home/affisgwa/public_html/account/center/settings.php on line 39
+[25-Jan-2022 09:28:03 America/New_York] PHP Notice:  Undefined index: city in /home/affisgwa/public_html/account/center/settings.php on line 47
+[25-Jan-2022 09:28:05 America/New_York] PHP Notice:  Undefined index: first_name in /home/affisgwa/public_html/account/center/settings.php on line 39
+[25-Jan-2022 09:28:05 America/New_York] PHP Notice:  Undefined index: city in /home/affisgwa/public_html/account/center/settings.php on line 47
+[25-Jan-2022 18:30:10 America/New_York] PHP Notice:  Undefined index: first_name in /home/affisgwa/public_html/account/center/settings.php on line 39
+[25-Jan-2022 18:30:10 America/New_York] PHP Notice:  Undefined index: city in /home/affisgwa/public_html/account/center/settings.php on line 47
+[25-Jan-2022 18:32:14 America/New_York] PHP Notice:  Undefined index: first_name in /home/affisgwa/public_html/account/center/settings.php on line 39
+[25-Jan-2022 18:32:14 America/New_York] PHP Notice:  Undefined index: city in /home/affisgwa/public_html/account/center/settings.php on line 47

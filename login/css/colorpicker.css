@@ -1,0 +1,275 @@
+@-webkit-keyframes colorpicker {
+  0% {
+    margin-left: -240px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@-moz-keyframes colorpicker {
+  0% {
+    margin-left: -240px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@-ms-keyframes colorpicker {
+  0% {
+    margin-left: -240px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@-o-keyframes colorpicker {
+  0% {
+    margin-left: -240px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+.colorpicker {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 536px;
+  margin-top: -203px;
+  padding: 0 25px;
+  position: fixed;
+  top: 50%;
+  width: 220px;
+  z-index: 99999;
+  margin-left: -220px;
+  -webkit-transition: margin-left 0.3s;
+  transition: margin-left 0.3s;
+}
+.colorpicker.animate {
+  -webkit-animation: colorpicker 1s normal forwards ease-in-out;
+  -moz-animation: colorpicker 1s normal forwards ease-in-out;
+  -ms-animation: colorpicker 1s normal forwards ease-in-out;
+  -o-animation: colorpicker 1s normal forwards ease-in-out;
+}
+.colorpicker.close {
+  margin-left: 0px;
+}
+.colorpicker ul {
+  padding: 0;
+}
+.colorpicker ul:before,
+.colorpicker ul:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.colorpicker ul:after {
+  clear: both;
+}
+.colorpicker ul:before,
+.colorpicker ul:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.colorpicker ul:after {
+  clear: both;
+}
+.colorpicker select {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  outline: none;
+  padding: 11px 14px;
+  width: 100%;
+}
+.colorpicker .fields {
+  margin: 0 auto;
+  width: 150px;
+}
+.colorpicker .fields li {
+  border-radius: 2px;
+  float: left;
+  height: 16px;
+  list-style: none;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  position: relative;
+  overflow: hidden;
+  width: 16px;
+}
+.colorpicker .fields li.selected:before {
+  color: #fff;
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  font-size: 11px;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  left: 2px;
+  z-index: 2;
+}
+.colorpicker .fields li button {
+  border: none;
+  height: 100%;
+  outline: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.colorpicker .fields li button.color-1 {
+  background-color: #D54900;
+}
+.colorpicker .fields li button.color-2 {
+  background-color: #535353;
+}
+.colorpicker .fields li button.color-3 {
+  background-color: #2590ce;
+}
+.colorpicker .fields li button.color-4 {
+  background-color: #84c549;
+}
+.colorpicker .fields li button.color-5 {
+  background-color: #9560d0;
+}
+.colorpicker .fields li button.color-6 {
+  background-color: #1abc9c;
+}
+.colorpicker .fields li button.color-7 {
+  background-color: #95a5a6;
+}
+.colorpicker .fields li button.color-8 {
+  background-color: #34495e;
+}
+.colorpicker .fields li button.color-9 {
+  background-color: #2980b9;
+}
+.colorpicker .fields li button.color-10 {
+  background-color: #e67e22;
+}
+.colorpicker h2 {
+  color: #b2b2b2;
+  font-size: 14px;
+  margin: 26px 0 21px 0;
+  padding: 0;
+  text-align: center;
+  text-transform: none;
+  font-weight: 300;
+}
+.colorpicker .close {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  font-size: 23px;
+  position: absolute;
+  left: 100%;
+  top: 51px;
+  width: 41px;
+  height: 46px;
+}
+.colorpicker .close button {
+  background: none;
+  border: none;
+  color: #3a3a3a;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: -2px;
+  width: 100% !important;
+  height: 46px;
+  outline: none;
+  text-align: center;
+}
+.colorpicker .close button:empty {
+  width: 1em;
+}
+.colorpicker .close button:before {
+  content: "\f013";
+}
+.colorpicker .close button:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -11px;
+  margin-top: -12px;
+}
+.colorpicker .close:after {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+.colorpicker .close:before {
+  position: absolute;
+}
+.layout {
+  text-align: center;
+}
+.layout img {
+  cursor: pointer;
+  margin: 0 5px;
+}
+.selected-layout {
+    outline: 5px solid #000;
+}
+.colorpicker .fields li button.pattern-1 {
+  background-image: url('patterns/pattern-1.png');
+}
+.colorpicker .fields li button.pattern-2 {
+  background-image: url('patterns/pattern-2.png');
+}
+.colorpicker .fields li button.pattern-3 {
+  background-image: url('patterns/pattern-3.png');
+}
+.colorpicker .fields li button.pattern-4 {
+  background-image: url('patterns/pattern-4.png');
+}
+.colorpicker .fields li button.pattern-5 {
+  background-image: url('patterns/pattern-5.png');
+}
+.colorpicker .fields li button.pattern-6 {
+  background-image: url('patterns/pattern-6.png');
+}
+.colorpicker .fields li button.pattern-7 {
+  background-image: url('patterns/pattern-7.png');
+}
+.colorpicker .fields li button.pattern-8 {
+  background-image: url('patterns/pattern-8.png');
+}
+.colorpicker .fields li button.pattern-9 {
+  background-image: url('patterns/pattern-9.png');
+}
+.colorpicker .fields li button.pattern-10 {
+  background-image: url('patterns/pattern-10.png');
+}
+.colorpicker header {
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #e3e3e3;
+  margin: 0px -24px 0 -24px;
+  padding: 16px;
+}
+.colorpicker header h2 {
+  color: #3f3f3f;
+  margin: 0;
+}
+
+select.layout {
+  text-align: left;
+}
